@@ -1,6 +1,6 @@
 You must first clone the repository from a git clone in order to run this Website.
 
-When you open the, the second step is to browse to the movieapi my-app: 
+When you open the, the second step is to browse to the  my-app: 
 
                              cd my-app
                     
