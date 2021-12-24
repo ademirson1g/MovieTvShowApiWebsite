@@ -10,6 +10,10 @@ The third phase entails the installation of modules:
 
                          npm install react-scripts
                          
+After that you write this command to start the website :
+                        
+                        npm start
+                         
                          
   This website was created using React , Typescript , Context, Routes , Hooks.
   It is about searching for Movies and TV Shows. 
