@@ -4,7 +4,7 @@ const posterBaseUrl = "https://image.tmdb.org/t/p/w200";
 export async function discoverMovies(): Promise<Movie[]> {
   try {
     const res = await fetch(
-      `${movieApiBaseUrl}/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
+      `${movieApiBaseUrl}/discover/movie?sort_by=popularity.desc&api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results);
@@ -16,7 +16,7 @@ export async function discoverMovies(): Promise<Movie[]> {
 export async function searchMovies(search: string): Promise<Movie[]> {
   try {
     const res = await fetch(
-      `${movieApiBaseUrl}/search/movie?query=${search}&api_key=${process.env.REACT_APP_API_KEY}`
+      `${movieApiBaseUrl}/search/movie?query=${search}&api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results);
@@ -29,7 +29,7 @@ export async function searchMovies(search: string): Promise<Movie[]> {
 export async function top10Movies(): Promise<Movie[]> {
   try {
     const res = await fetch(
-      `${movieApiBaseUrl}/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}`
+      `${movieApiBaseUrl}/movie/top_rated?api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results.slice(0, 10));
