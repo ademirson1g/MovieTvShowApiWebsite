@@ -5,7 +5,7 @@ const posterBaseUrl = "https://image.tmdb.org/t/p/w300";
 export async function discoverTvShows(): Promise<TvShow[]> {
   try {
     const res = await fetch(
-      `${tvshowApiBaseUrl}/discover/tv?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
+      `${tvshowApiBaseUrl}/discover/tv?sort_by=popularity.desc&api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results);
@@ -17,7 +17,7 @@ export async function discoverTvShows(): Promise<TvShow[]> {
 export async function searchTvShow(search: string): Promise<TvShow[]> {
   try {
     const res = await fetch(
-      `${tvshowApiBaseUrl}/search/tv?query=${search}&api_key=${process.env.REACT_APP_API_KEY}`
+      `${tvshowApiBaseUrl}/search/tv?query=${search}&api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results);
@@ -30,7 +30,7 @@ export async function searchTvShow(search: string): Promise<TvShow[]> {
 export async function top10TvShow(): Promise<TvShow[]> {
   try {
     const res = await fetch(
-      `${tvshowApiBaseUrl}/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}`
+      `${tvshowApiBaseUrl}/tv/top_rated?api_key=18efa1c884796c304e2b89592f48fa10`
     );
     const response = await res.json();
     return mapResult(response.results.slice(0, 10));
